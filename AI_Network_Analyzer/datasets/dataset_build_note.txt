@@ -1,0 +1,5 @@
+source=synthetic_cicids_style
+rows=12000
+features=39
+classes={'Normal': 5926, 'DDoS': 1801, 'DoS': 1798, 'PortScan': 1116, 'BruteForce': 822, 'SQLInjection': 537}
+disclaimer=Not a CICIDS2017 leaderboard dump unless a public CSV was imported.

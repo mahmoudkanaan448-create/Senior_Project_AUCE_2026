@@ -1,0 +1,223 @@
+paragraphs=520 tables=32
+[31|toc 1] List of Figures	8
+[32|toc 1] List of Tables	8
+[33|toc 1] List of Acronyms	9
+[133|Heading 1] List of Figures
+[134|Normal] Figure A. Expanded System Architecture aligned with the implemented AI-NDR software.
+[135|Normal] Figure B. MITRE ATT&CK enrichment and SOAR playbook example (Ransomware).
+[136|Normal] Figure C. End-to-end detection and response pipeline implemented in software.
+[137|Normal] Figure D. Code excerpt: Hybrid AI decision fusion.
+[138|Normal] Figure E. Code excerpt: MITRE ATT&CK mapping module.
+[139|Normal] Figure F. Code excerpt: SOAR playbook definitions.
+[140|Normal] Figure G. Code excerpt: online incremental learning.
+[141|Normal] Figure H. Code excerpt: threat simulation engine.
+[142|Normal] Figure I. Code excerpt: alert manager with playbook hook.
+[143|Normal] Figure J. Code excerpt: Telegram alert delivery.
+[144|Normal] Figure K. Code excerpt: server auto-recovery supervisor.
+[145|Normal] Figure L. Server deployment with supervisor-based auto-recovery.
+[146|Heading 1] List of Tables
+[148|Heading 1] List of Acronyms
+[255|Normal] Figure 1. Proposed System Architecture.
+[259|Normal] Figure 2. AI Detection Pipeline.
+[264|Normal] Figure A. Expanded System Architecture aligned with the implemented AI-NDR software.
+[267|Normal] Figure 3. Data Flow Diagram (DFD Level 1).
+[271|Normal] Figure 4. Use Case Diagram.
+[273|Normal] Figure 5. Sequence Diagram - Real-Time Detection.
+[275|Normal] Figure 6. Activity Diagram - Detection Workflow.
+[279|Normal] Figure 7. Simplified STRIDE Threat Model.
+[284|Normal] Figure B. MITRE ATT&CK enrichment and SOAR playbook example (Ransomware).
+[298|Normal] Figure 8. Real-Time Dashboard Mockup.
+[303|Normal] Figure D. Code excerpt: Hybrid AI decision fusion.
+[305|Normal] Figure E. Code excerpt: MITRE ATT&CK mapping module.
+[307|Normal] Figure F. Code excerpt: SOAR playbook definitions.
+[309|Normal] Figure G. Code excerpt: online incremental learning.
+[311|Normal] Figure H. Code excerpt: threat simulation engine.
+[313|Normal] Figure I. Code excerpt: alert manager with playbook hook.
+[315|Normal] Figure J. Code excerpt: Telegram alert delivery.
+[317|Normal] Figure K. Code excerpt: server auto-recovery supervisor.
+[349|Normal] Figure 9. Confusion Matrix Example.
+[351|Normal] Figure 10. ROC Curve Example.
+[354|Normal] Figure 11. Expected Model Performance Comparison.
+[384|Normal] Figure L. Server deployment with supervisor-based auto-recovery.
+[478|Heading 1] References
+
+=== FIGURE CAPTIONS IN BODY ===
+134: Figure A. Expanded System Architecture aligned with the implemented AI-NDR software.
+135: Figure B. MITRE ATT&CK enrichment and SOAR playbook example (Ransomware).
+136: Figure C. End-to-end detection and response pipeline implemented in software.
+137: Figure D. Code excerpt: Hybrid AI decision fusion.
+138: Figure E. Code excerpt: MITRE ATT&CK mapping module.
+139: Figure F. Code excerpt: SOAR playbook definitions.
+140: Figure G. Code excerpt: online incremental learning.
+141: Figure H. Code excerpt: threat simulation engine.
+142: Figure I. Code excerpt: alert manager with playbook hook.
+143: Figure J. Code excerpt: Telegram alert delivery.
+144: Figure K. Code excerpt: server auto-recovery supervisor.
+145: Figure L. Server deployment with supervisor-based auto-recovery.
+255: Figure 1. Proposed System Architecture.
+259: Figure 2. AI Detection Pipeline.
+264: Figure A. Expanded System Architecture aligned with the implemented AI-NDR software.
+267: Figure 3. Data Flow Diagram (DFD Level 1).
+271: Figure 4. Use Case Diagram.
+273: Figure 5. Sequence Diagram - Real-Time Detection.
+275: Figure 6. Activity Diagram - Detection Workflow.
+279: Figure 7. Simplified STRIDE Threat Model.
+284: Figure B. MITRE ATT&CK enrichment and SOAR playbook example (Ransomware).
+298: Figure 8. Real-Time Dashboard Mockup.
+303: Figure D. Code excerpt: Hybrid AI decision fusion.
+305: Figure E. Code excerpt: MITRE ATT&CK mapping module.
+307: Figure F. Code excerpt: SOAR playbook definitions.
+309: Figure G. Code excerpt: online incremental learning.
+311: Figure H. Code excerpt: threat simulation engine.
+313: Figure I. Code excerpt: alert manager with playbook hook.
+315: Figure J. Code excerpt: Telegram alert delivery.
+317: Figure K. Code excerpt: server auto-recovery supervisor.
+349: Figure 9. Confusion Matrix Example.
+351: Figure 10. ROC Curve Example.
+354: Figure 11. Expected Model Performance Comparison.
+384: Figure L. Server deployment with supervisor-based auto-recovery.
+
+figure_captions_count=34
+
+=== ACRONYM-LIKE LINES NEAR LoA ===
+START LoA @148
+  ATT&CK - Adversarial Tactics, Techniques, and Common Knowledge
+  MITRE - MITRE Corporation knowledge base for adversary behavior
+  SOAR - Security Orchestration, Automation and Response
+  SGD - Stochastic Gradient Descent
+  SOC - Security Operations Center
+  SQLite - Embedded relational database engine
+END LoA @156 -> Chapter 1 - Introduction
+
+=== TABLES PREVIEW (first cell) ===
+T0: 12x2 | No.
+T1: 11x2 | No.
+T2: 24x2 | Acronym
+T3: 7x2 | Objective
+T4: 6x2 | RQ
+T5: 6x3 | Model
+T6: 6x2 | Dataset
+T7: 21x6 | #
+T8: 10x2 | Module
+T9: 11x2 | Component
+T10: 9x2 | Feature Group
+T11: 8x2 | Table
+T12: 10x2 | Step
+T13: 9x2 | Endpoint
+T14: 13x2 | Step
+T15: 9x2 | Folder
+T16: 9x2 | Component
+T17: 7x2 | Scenario
+T18: 9x2 | Metric
+T19: 6x7 | Metric
+T20: 11x3 | Test Case
+T21: 7x2 | Risk
+T22: 6x2 | Frequency
+T23: 9x2 | Requirement
+T24: 7x2 | Requirement Type
+T25: 6x2 | Question
+T26: 13x2 | Slide
+T27: 7x2 | Question
+T28: 11x2 | Week
+T29: 11x3 | Step
+T30: 11x2 | Item
+T31: 13x2 | Term
+
+=== REFERENCES ===
+[1] Ahmad, Z., Khan, A. S., Wai Shiang, C., Abdullah, J., & Ahmad, F. (2021). Network intrusion detection system: 
+[2] Breiman, L. (2001). Random forests. Machine Learning, 45, 5-32. https://doi.org/10.1023/A:1010933404324
+[3] Canadian Institute for Cybersecurity. (n.d.). Intrusion detection evaluation dataset (CICIDS2017). University 
+[4] Canadian Institute for Cybersecurity. (n.d.). NSL-KDD dataset. University of New Brunswick. https://www.unb.ca
+[5] Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGK
+[6] Cisco. (n.d.). Cisco Secure Network Analytics. https://www.cisco.com/site/us/en/products/security/secure-netwo
+[7] Cisco. (n.d.). Cisco XDR. https://www.cisco.com/site/us/en/products/security/xdr/index.html
+[8] Corelight. (n.d.). Open NDR platform. https://corelight.com/
+[9] Darktrace. (n.d.). Darktrace ActiveAI Security Platform. https://darktrace.com/
+[10] Elastic. (n.d.). Elastic Security. https://www.elastic.co/security
+[11] ExtraHop. (n.d.). RevealX network detection and response. https://www.extrahop.com/products/revealx/
+[12] Google Cloud. (n.d.). Google Security Operations. https://cloud.google.com/security/products/security-operatio
+[13] IBM. (n.d.). IBM QRadar SIEM. https://www.ibm.com/products/qradar-siem
+[14] Khraisat, A., Gondal, I., Vamplew, P., & Kamruzzaman, J. (2019). Survey of intrusion detection systems: Techni
+[15] Liu, F. T., Ting, K. M., & Zhou, Z. H. (2008). Isolation forest. In 2008 Eighth IEEE International Conference 
+[16] Microsoft. (n.d.). Microsoft Sentinel documentation. https://learn.microsoft.com/azure/sentinel/
+[17] Moustafa, N., & Slay, J. (2015). UNSW-NB15: A comprehensive data set for network intrusion detection systems. 
+[18] National Institute of Standards and Technology. (2024). The NIST Cybersecurity Framework (CSF) 2.0 (NIST CSWP 
+[19] Palo Alto Networks. (n.d.). Cortex XSIAM. https://www.paloaltonetworks.com/cortex/cortex-xsiam
+[20] Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P.
+[21] Rapid7. (n.d.). InsightIDR. https://www.rapid7.com/products/insightidr/
+[22] Scikit-learn developers. (n.d.). IsolationForest. Scikit-learn documentation. https://scikit-learn.org/stable/
+[23] Security Onion Solutions. (n.d.). Security Onion documentation. https://docs.securityonion.net/
+[24] Sharafaldin, I., Habibi Lashkari, A., & Ghorbani, A. A. (2018). Toward generating a new intrusion detection da
+[25] Snort. (n.d.). Snort 3. https://www.snort.org/snort3
+[26] Sommer, R., & Paxson, V. (2010). Outside the closed world: On using machine learning for network intrusion det
+[27] Splunk. (n.d.). Splunk Enterprise Security. https://www.splunk.com/en_us/products/enterprise-security.html
+[28] Suricata. (n.d.). Suricata user guide. https://docs.suricata.io/
+[29] Trend Micro. (n.d.). Trend Vision One. https://www.trendmicro.com/en_us/business/products/one-platform.html
+[30] Vectra AI. (n.d.). Vectra AI platform. https://www.vectra.ai/
+[31] Wazuh. (n.d.). Wazuh documentation. https://documentation.wazuh.com/
+[32] Zeek. (n.d.). Zeek documentation. https://docs.zeek.org/
+[33] FastAPI developers. (n.d.). FastAPI documentation. https://fastapi.tiangolo.com/
+[34] Streamlit Inc. (n.d.). Streamlit documentation. https://docs.streamlit.io/
+[35] Telegram FZ LLC. (n.d.). Telegram Bot API. https://core.telegram.org/bots/api
+[36] MITRE Corporation. (n.d.). MITRE ATT&CK. https://attack.mitre.org/
+[37] The SQLite Consortium. (n.d.). SQLite documentation. https://www.sqlite.org/docs.html
+[38] Uvicorn developers. (n.d.). Uvicorn - ASGI server. https://www.uvicorn.org/
+[39] AbuseIPDB. (n.d.). AbuseIPDB API documentation. https://docs.abuseipdb.com/
+[40] Scikit-learn developers. (n.d.). SGDClassifier. https://scikit-learn.org/stable/modules/generated/sklearn.line
+
+=== INLINE CITATIONS USED ===
+inline_cites=[]
+cited_but_no_ref=[]
+ref_but_never_cited=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+
+=== POSSIBLE UNCITED CLAIMS ===
+Random Forest: 2 uncited-ish paras
+   @24 The proposed system integrates multiple Artificial Intelligence models, including Random Forest, XGB
+   @262 The implemented system modules match the software repository. Monitoring captures live connections o
+XGBoost: 3 uncited-ish paras
+   @24 The proposed system integrates multiple Artificial Intelligence models, including Random Forest, XGB
+   @262 The implemented system modules match the software repository. Monitoring captures live connections o
+Isolation Forest: 3 uncited-ish paras
+   @24 The proposed system integrates multiple Artificial Intelligence models, including Random Forest, XGB
+   @262 The implemented system modules match the software repository. Monitoring captures live connections o
+LSTM: 5 uncited-ish paras
+   @24 The proposed system integrates multiple Artificial Intelligence models, including Random Forest, XGB
+   @187 The reviewed systems show that modern cybersecurity is moving toward AI-based detection, behavioral 
+Autoencoder: 2 uncited-ish paras
+   @24 The proposed system integrates multiple Artificial Intelligence models, including Random Forest, XGB
+   @262 The implemented system modules match the software repository. Monitoring captures live connections o
+Streamlit: 2 uncited-ish paras
+   @299 The implemented Streamlit dashboard displays total flows, active alerts, average threat score, recen
+   @433 The administrator starts the system using run.bat (local) or run_server.bat (server/auto-recovery). 
+FastAPI: 2 uncited-ish paras
+   @24 The proposed system integrates multiple Artificial Intelligence models, including Random Forest, XGB
+   @433 The administrator starts the system using run.bat (local) or run_server.bat (server/auto-recovery). 
+SQLite: 2 uncited-ish paras
+   @154 SQLite - Embedded relational database engine
+   @382 The proposed system can be deployed on a local laboratory machine or on a small server. Local develo
+Telegram: 11 uncited-ish paras
+   @24 The proposed system integrates multiple Artificial Intelligence models, including Random Forest, XGB
+   @143 Figure J. Code excerpt: Telegram alert delivery.
+MITRE: 14 uncited-ish paras
+   @135 Figure B. MITRE ATT&CK enrichment and SOAR playbook example (Ransomware).
+   @138 Figure E. Code excerpt: MITRE ATT&CK mapping module.
+ATT&CK: 6 uncited-ish paras
+   @135 Figure B. MITRE ATT&CK enrichment and SOAR playbook example (Ransomware).
+   @138 Figure E. Code excerpt: MITRE ATT&CK mapping module.
+Snort: 2 uncited-ish paras
+   @245 Snort 3 was reviewed because it represents an important direction in modern cybersecurity: IDS/IPS. 
+   @246 From a Bachelor project perspective, the value of comparing Snort 3 is that it helps justify why the
+Suricata: 3 uncited-ish paras
+   @239 Suricata was reviewed because it represents an important direction in modern cybersecurity: IDS/IPS.
+   @240 From a Bachelor project perspective, the value of comparing Suricata is that it helps justify why th
+Zeek: 3 uncited-ish paras
+   @236 Zeek was reviewed because it represents an important direction in modern cybersecurity: Network meta
+   @237 From a Bachelor project perspective, the value of comparing Zeek is that it helps justify why the pr
+Darktrace: 2 uncited-ish paras
+   @191 Darktrace was reviewed because it represents an important direction in modern cybersecurity: AI-base
+   @192 From a Bachelor project perspective, the value of comparing Darktrace is that it helps justify why t
+SOAR: 15 uncited-ish paras
+   @135 Figure B. MITRE ATT&CK enrichment and SOAR playbook example (Ransomware).
+   @139 Figure F. Code excerpt: SOAR playbook definitions.
+SGD: 1 uncited-ish paras
+   @262 The implemented system modules match the software repository. Monitoring captures live connections o

@@ -1,0 +1,21 @@
+============================================================
+  Daily Report – 2026-08-12
+============================================================
+
+Total Predictions : 10
+Total Alerts      : 10
+
+Severity Breakdown:
+  Critical  : 10
+  High      : 0
+  Medium    : 0
+  Low       : 0
+
+Attack Types:
+  Botnet              : 3
+  PortScan            : 2
+  Malware             : 2
+  DoS                 : 2
+  SQLInjection        : 1
+
+============================================================

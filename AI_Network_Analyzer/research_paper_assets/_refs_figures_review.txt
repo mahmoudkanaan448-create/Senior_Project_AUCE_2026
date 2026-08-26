@@ -1,0 +1,88 @@
+Removed 12 loose LoF paragraph entries
+Inserted missing Figure C (pipeline) into body
+Caption renumber: Figure 1 -> Figure 1 | Proposed System Architecture.
+Caption renumber: Figure 2 -> Figure 2 | AI Detection Pipeline.
+Caption renumber: Figure A -> Figure 3 | Expanded System Architecture aligned with the implemented AI-NDR software.
+Caption renumber: Figure 3 -> Figure 4 | Data Flow Diagram (DFD Level 1).
+Caption renumber: Figure 4 -> Figure 5 | Use Case Diagram.
+Caption renumber: Figure 5 -> Figure 6 | Sequence Diagram - Real-Time Detection.
+Caption renumber: Figure 6 -> Figure 7 | Activity Diagram - Detection Workflow.
+Caption renumber: Figure 7 -> Figure 8 | Simplified STRIDE Threat Model.
+Caption renumber: Figure B -> Figure 9 | MITRE ATT&CK enrichment and SOAR playbook example (Ransomware).
+Caption renumber: Figure C -> Figure 10 | End-to-end detection and response pipeline implemented in software.
+Caption renumber: Figure 8 -> Figure 11 | Real-Time Dashboard Mockup.
+Caption renumber: Figure D -> Figure 12 | Code excerpt: Hybrid AI decision fusion.
+Caption renumber: Figure E -> Figure 13 | Code excerpt: MITRE ATT&CK mapping module.
+Caption renumber: Figure F -> Figure 14 | Code excerpt: SOAR playbook definitions.
+Caption renumber: Figure G -> Figure 15 | Code excerpt: online incremental learning.
+Caption renumber: Figure H -> Figure 16 | Code excerpt: threat simulation engine.
+Caption renumber: Figure I -> Figure 17 | Code excerpt: alert manager with playbook hook.
+Caption renumber: Figure J -> Figure 18 | Code excerpt: Telegram alert delivery.
+Caption renumber: Figure K -> Figure 19 | Code excerpt: server auto-recovery supervisor.
+Caption renumber: Figure 9 -> Figure 20 | Confusion Matrix Example.
+Caption renumber: Figure 10 -> Figure 21 | ROC Curve Example.
+Caption renumber: Figure 11 -> Figure 22 | Expected Model Performance Comparison.
+Caption renumber: Figure L -> Figure 23 | Server deployment with supervisor-based auto-recovery.
+LoF table rebuilt with 23 figures
+Removed 6 loose LoA paragraph entries
+Acronym table rebuilt with 35 entries
+Vendor cite: Cisco Secure Network Analytics was reviewed -> [6]
+Vendor cite: IBM QRadar was reviewed -> [13]
+Vendor cite: Cisco XDR was reviewed -> [7]
+Citation updates applied (paragraph touches≈15)
+Abstract updated to match implemented stack + citations
+Added reference [41] CrowdStrike
+Cited CrowdStrike with [41]
+
+========== REVIEW PASS 1 ==========
+Body figure captions: 23
+LoF table rows: 23
+OK: body figure numbers sequential 1..N
+OK: LoF table matches body captions
+Acronym rows: 35
+Loose LoA paragraphs (should be 0): 0
+References numbered: 41 (max=41)
+OK: reference numbers contiguous
+Inline unique citations: [2, 3, 5, 6, 7, 13, 15, 20, 24, 33, 34, 35, 36, 37, 40, 41]
+Cited but missing in References: NONE
+In References but never cited in body: [1, 4, 8, 9, 10, 11, 12, 14, 16, 17, 18, 19, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 32, 38, 39]
+
+========== REVIEW PASS 2 ==========
+PASS2 OK: Random Forest with [2]
+PASS2 OK: XGBoost with [5]
+PASS2 OK: Isolation Forest with [15]
+PASS2 OK: Streamlit with [34]
+PASS2 OK: FastAPI with [33]
+PASS2 OK: SQLite with [37]
+PASS2 OK: Telegram with [35]
+PASS2 OK: MITRE with [36]
+PASS2 FAIL: Darktrace was reviewed with [9]
+PASS2 FAIL: Zeek was reviewed with [32]
+PASS2 FAIL: Suricata was reviewed with [28]
+PASS2 FAIL: Snort 3 was reviewed with [25]
+Leftover lettered figures: NONE
+LoF table final count=23
+Acronym table final count=35
+  LoF[1] Figure 1: Proposed System Architecture.
+  LoF[2] Figure 2: AI Detection Pipeline.
+  LoF[3] Figure 3: Expanded System Architecture aligned with the implemented AI-NDR software.
+  LoF[4] Figure 4: Data Flow Diagram (DFD Level 1).
+  LoF[5] Figure 5: Use Case Diagram.
+  LoF[6] Figure 6: Sequence Diagram - Real-Time Detection.
+  LoF[7] Figure 7: Activity Diagram - Detection Workflow.
+  LoF[8] Figure 8: Simplified STRIDE Threat Model.
+  LoF[9] Figure 9: MITRE ATT&CK enrichment and SOAR playbook example (Ransomware).
+  LoF[10] Figure 10: End-to-end detection and response pipeline implemented in software.
+  LoF[11] Figure 11: Real-Time Dashboard Mockup.
+  LoF[12] Figure 12: Code excerpt: Hybrid AI decision fusion.
+  LoF[13] Figure 13: Code excerpt: MITRE ATT&CK mapping module.
+  LoF[14] Figure 14: Code excerpt: SOAR playbook definitions.
+  LoF[15] Figure 15: Code excerpt: online incremental learning.
+  LoF[16] Figure 16: Code excerpt: threat simulation engine.
+  LoF[17] Figure 17: Code excerpt: alert manager with playbook hook.
+  LoF[18] Figure 18: Code excerpt: Telegram alert delivery.
+  LoF[19] Figure 19: Code excerpt: server auto-recovery supervisor.
+  LoF[20] Figure 20: Confusion Matrix Example.
+  LoF[21] Figure 21: ROC Curve Example.
+  LoF[22] Figure 22: Expected Model Performance Comparison.
+  LoF[23] Figure 23: Server deployment with supervisor-based auto-recovery.

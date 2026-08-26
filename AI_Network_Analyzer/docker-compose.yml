@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: aindr
+      POSTGRES_USER: aindr
+      POSTGRES_PASSWORD: change-me-in-production
+    ports:
+      - "5432:5432"
+    volumes:
+      - aindr_pg:/var/lib/postgresql/data
+
+volumes:
+  aindr_pg:

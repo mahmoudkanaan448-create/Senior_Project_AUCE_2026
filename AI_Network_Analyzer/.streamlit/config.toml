@@ -1,0 +1,14 @@
+[theme]
+primaryColor = "#d4af37"
+backgroundColor = "#0c1a2e"
+secondaryBackgroundColor = "#12233d"
+textColor = "#f8fafc"
+font = "sans serif"
+
+[server]
+runOnSave = true
+headless = true
+fileWatcherType = "poll"
+
+[browser]
+gatherUsageStats = false

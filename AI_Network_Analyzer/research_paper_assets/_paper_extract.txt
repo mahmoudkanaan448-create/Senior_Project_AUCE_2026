@@ -1,0 +1,396 @@
+[2|Heading 1] Declaration
+[3|Normal] I hereby declare that this Senior Project entitled "AI-Powered Network Traffic Analyzer & Anomaly Detector" is my original work and has not been submitted, either wholly or partially, for any degree or diploma at any university or educational institution.
+[4|Normal] All information obtained from books, scientific journals, conference papers, official documentation, datasets, and technical resources has been properly acknowledged and cited according to APA 7 style. The report is prepared for the Bachelor of Science in Computer Science at the American University of Culture and Education (AUCE).
+[5|Normal] Student Name: Mahmoud Talal Kanaan
+[6|Normal] Student ID: 2240004
+[7|Normal] Supervisor: Dr. Hasan Nour Eldin
+[8|Normal] Signature: ______________________        Date: ______________________
+[13|Heading 1] Acknowledgment
+[16|Normal] First and foremost, I thank Almighty God for granting me the strength, patience, and determination to complete this Senior Project. I would also like to express my sincere gratitude to my project supervisor, Dr. Hasan Nour Eldin, for guidance, feedback, and encouragement throughout the preparation of this project.
+[17|Normal] I also thank the Faculty of Science and the Department of Computer Science at AUCE for providing the academic foundation needed to understand programming, databases, networking, cybersecurity, and artificial intelligence. Finally, I thank my family and friends for their support during my academic journey.
+[21|Heading 1] Abstract
+[23|Normal] Cyberattacks have become more sophisticated as organizations depend increasingly on cloud computing, IoT devices, web systems, and high-speed networks. Traditional signature-based Intrusion Detection Systems are useful for known attacks, but they are limited when attackers modify their behavior or when unknown zero-day attacks appear. This project proposes an AI-Powered Network Traffic Analyzer & Anomaly Detector, an academic Network Detection and Response platform designed to capture network traffic, extract meaningful features, detect anomalies, classify known attacks, generate alerts, and support automated response.
+[24|Normal] The proposed system integrates multiple Artificial Intelligence models, including Random Forest, XGBoost, Isolation Forest, Autoencoder, and LSTM. The design combines supervised detection, unsupervised anomaly detection, sequential attack prediction, Explainable AI, Threat Intelligence, geo-location, a real-time dashboard, database storage, email and Telegram notifications, and automatic IP blocking. The system is implemented using open-source technologies such as Python, FastAPI, PostgreSQL, Scikit-learn, TensorFlow/Keras, XGBoost, PyShark, Scapy, and web technologies.
+[25|Normal] This final condensed report is based on the full senior project document and keeps the essential academic content within a Bachelor-level 30-40 page structure. It includes the research problem, objectives, literature review, comparison of twenty cybersecurity platforms, proposed architecture, implementation plan, diagrams, evaluation metrics, expected results, limitations, future work, and verified APA 7 references.
+[26|Normal] Keywords: Artificial Intelligence, Network Intrusion Detection, Network Traffic Analysis, Anomaly Detection, Machine Learning, Deep Learning, NDR, XAI.
+[28|toc 1] Declaration	3
+[29|toc 1] Acknowledgment	4
+[30|toc 1] Abstract	5
+[31|toc 1] List of Figures	8
+[32|toc 1] List of Tables	8
+[33|toc 1] List of Acronyms	9
+[34|toc 1] Chapter 1 - Introduction	10
+[35|toc 2] 1.1 Background	10
+[36|toc 2] 1.2 Problem Statement	10
+[37|toc 2] 1.3 Proposed Solution	10
+[38|toc 2] 1.4 Research Objectives	10
+[39|toc 2] 1.5 Research Questions	10
+[40|toc 2] 1.6 Scope	10
+[41|toc 2] 1.7 Methodology	11
+[42|toc 2] 1.8 Thesis Organization	11
+[43|toc 1] Chapter 2 - Literature Review and State of the Art	12
+[44|toc 2] 2.1 Traditional Intrusion Detection Systems	12
+[45|toc 2] 2.2 AI-Based Intrusion Detection	12
+[46|toc 2] 2.3 Machine Learning and Deep Learning Techniques	12
+[47|toc 2] 2.4 Datasets Used in Network Intrusion Detection	12
+[48|toc 2] 2.5 State of the Art: 20 Applications	12
+[49|toc 2] 2.6 Literature Gap	13
+[50|toc 2] 2.7 Detailed State-of-the-Art Gap Analysis	13
+[51|toc 3] Darktrace	13
+[52|toc 3] Vectra AI	13
+[53|toc 3] ExtraHop RevealX	14
+[54|toc 3] Corelight Open NDR	14
+[55|toc 3] Cisco Secure Network Analytics	14
+[56|toc 3] Palo Alto Cortex XSIAM	14
+[57|toc 3] Microsoft Sentinel	15
+[58|toc 3] Splunk Enterprise Security	15
+[59|toc 3] IBM QRadar	15
+[60|toc 3] Elastic Security	15
+[61|toc 3] CrowdStrike Falcon	16
+[62|toc 3] Trend Micro Vision One	16
+[63|toc 3] Google Security Operations	16
+[64|toc 3] Rapid7 InsightIDR	16
+[65|toc 3] Security Onion 2	16
+[66|toc 3] Zeek	17
+[67|toc 3] Suricata	17
+[68|toc 3] Wazuh	17
+[69|toc 3] Snort 3	17
+[70|toc 3] Cisco XDR	18
+[71|toc 1] Chapter 3 - Proposed System Architecture	19
+[72|toc 2] 3.1 Architecture Overview	19
+[73|toc 2] 3.2 AI Detection Pipeline	19
+[74|toc 2] 3.3 Main Modules	20
+[75|toc 2] 3.4 Data Flow Diagram	20
+[76|toc 2] 3.5 UML Diagrams	21
+[77|toc 2] 3.6 Threat Model	22
+[78|toc 1] Chapter 4 - Implementation Methodology	24
+[79|toc 2] 4.1 Technology Stack	24
+[80|toc 2] 4.2 Feature Engineering	24
+[81|toc 2] 4.3 Model Development	24
+[82|toc 2] 4.4 Decision Fusion	24
+[83|toc 2] 4.5 Database Design	24
+[84|toc 2] 4.6 Dashboard Design	25
+[85|toc 2] 4.7 Implementation Workflow	25
+[86|toc 2] 4.8 Backend API Design	25
+[87|toc 2] 4.9 Algorithmic Workflow	26
+[88|toc 2] 4.10 Model Training Pseudocode	26
+[89|toc 2] 4.11 Project Folder Structure	26
+[90|toc 1] Chapter 5 - Testing and Evaluation	27
+[91|toc 2] 5.1 Testing Objectives	27
+[92|toc 2] 5.2 Testing Environment	27
+[93|toc 2] 5.3 Attack Simulation Scenarios	27
+[94|toc 2] 5.4 Evaluation Metrics	27
+[95|toc 2] 5.5 Confusion Matrix and ROC Curve	28
+[96|toc 2] 5.6 Expected Performance Comparison	29
+[97|toc 2] 5.7 Success Criteria	29
+[98|toc 2] 5.8 Detailed Test Cases	29
+[99|toc 2] 5.9 Data Validation Checklist	30
+[100|toc 2] 5.10 Error Handling and Reliability	30
+[101|toc 2] 5.11 Academic Honesty in Results	30
+[102|toc 1] Chapter 6 - Deployment, Limitations and Future Work	31
+[103|toc 2] 6.1 Deployment Architecture	31
+[104|toc 2] 6.2 Security Considerations	31
+[105|toc 2] 6.3 Limitations	31
+[106|toc 2] 6.4 Future Work	31
+[107|toc 2] 6.5 Ethical and Legal Considerations	31
+[108|toc 1] Chapter 7 - Practical Implementation Notes	32
+[109|toc 2] 7.1 Dataset Preparation Notes	32
+[110|toc 2] 7.2 Handling Class Imbalance	32
+[111|toc 2] 7.3 Threshold Tuning	32
+[112|toc 2] 7.4 Explainability Strategy	32
+[113|toc 2] 7.5 Report Generation	32
+[114|toc 2] 7.6 Final Demonstration Scenario	32
+[115|toc 1] Chapter 8 - User Manual and Operation Guide	33
+[116|toc 2] 8.1 Starting the System	33
+[117|toc 2] 8.2 Uploading Data or Capturing Live Traffic	33
+[118|toc 2] 8.3 Reading the Dashboard	33
+[119|toc 2] 8.4 Responding to Alerts	33
+[120|toc 2] 8.5 Maintenance Procedures	33
+[121|toc 2] 8.6 Minimal Functional Requirements	33
+[122|toc 2] 8.7 Non-Functional Requirements	33
+[123|toc 1] Conclusion	34
+[124|toc 1] Appendix A - Defense Preparation Notes	35
+[125|toc 1] Appendix B - Presentation Outline	35
+[126|toc 1] Appendix C - Additional Defense Questions	35
+[127|toc 1] Appendix D - Implementation Timeline	35
+[128|toc 1] Appendix E - Practical Code Skeleton	36
+[129|toc 1] Appendix F - Final Submission Checklist	36
+[130|toc 1] Appendix G - Glossary of Important Terms	36
+[131|toc 1] References	37
+[133|Heading 1] List of Figures
+[134|Heading 1] List of Tables
+[136|Heading 1] List of Acronyms
+[138|Heading 1] Chapter 1 - Introduction
+[139|Heading 2] 1.1 Background
+[140|Normal] Modern computer networks generate huge volumes of packets every second. These packets carry normal business activity, web requests, cloud communication, authentication traffic, database connections, and sometimes malicious behavior. Because the number of packets is too large for manual inspection, organizations need automated monitoring systems that can discover suspicious behavior quickly and accurately.
+[141|Normal] Traditional IDS tools usually depend on predefined signatures. This approach is effective when the attack is already known, but it becomes weaker when the attack is new, modified, hidden inside normal-looking behavior, or performed slowly over time. Artificial Intelligence provides an alternative approach because it can learn patterns from network features and detect behavior that does not match normal traffic.
+[142|Heading 2] 1.2 Problem Statement
+[143|Normal] The main problem addressed by this project is the difficulty of detecting known and unknown attacks in large-scale network traffic. Security analysts may receive many alerts, and traditional systems can miss unknown attacks or generate false positives. Therefore, the project proposes a hybrid AI-based platform that can analyze flows, classify attacks, detect anomalies, and present understandable alerts to the administrator.
+[144|Heading 2] 1.3 Proposed Solution
+[145|List Bullet] Capture network traffic from live interfaces, PCAP files, or benchmark datasets.
+[146|List Bullet] Extract flow-based features such as duration, bytes, packets, protocol, ports, packet length statistics, and rate values.
+[147|List Bullet] Preprocess the data by cleaning missing values, encoding categorical values, and scaling numerical features.
+[148|List Bullet] Use multiple AI models for known attack detection, anomaly detection, and prediction.
+[149|List Bullet] Provide Explainable AI outputs, Threat Intelligence enrichment, automatic response, and dashboard visualization.
+[150|Heading 2] 1.4 Research Objectives
+[151|Heading 2] 1.5 Research Questions
+[152|Heading 2] 1.6 Scope
+[153|Normal] The project is designed as an academic Bachelor-level prototype. It focuses on packet/flow capture, feature extraction, AI-based detection, dashboard visualization, notifications, and response simulation. It does not claim to replace enterprise commercial systems, but it demonstrates a complete AI-assisted NDR workflow using open-source tools.
+[154|Heading 2] 1.7 Methodology
+[155|Normal] The project follows a Design Science Research methodology. The process starts with literature review and gap analysis, then moves to architecture design, dataset preparation, model development, backend and dashboard implementation, testing, evaluation, and documentation. This methodology is suitable because the goal is to build and evaluate an artifact, not only discuss a theory.
+[156|Heading 2] 1.8 Thesis Organization
+[157|Normal] Chapter 1 introduces the project. Chapter 2 reviews related work and compares twenty applications. Chapter 3 presents the proposed architecture. Chapter 4 explains implementation methodology. Chapter 5 presents testing and evaluation. Chapter 6 discusses deployment, limitations, and future work. The report ends with conclusion, references, and appendices.
+[159|Heading 1] Chapter 2 - Literature Review and State of the Art
+[160|Heading 2] 2.1 Traditional Intrusion Detection Systems
+[161|Normal] An Intrusion Detection System monitors network or host activity to discover suspicious behavior. Signature-based detection compares traffic with known attack patterns and is efficient for known threats. However, it cannot reliably identify new attacks. Anomaly-based detection learns normal behavior and alerts when traffic deviates from that baseline. Hybrid IDS combines both methods to improve coverage.
+[162|Heading 2] 2.2 AI-Based Intrusion Detection
+[163|Normal] AI-based IDS uses Machine Learning and Deep Learning to recognize patterns in network traffic. Supervised learning models use labeled datasets to classify traffic as normal or malicious. Unsupervised learning models detect outliers without requiring labels. Deep Learning models can learn complex relationships and sequential behavior, especially when network activity changes over time.
+[164|Heading 2] 2.3 Machine Learning and Deep Learning Techniques
+[165|Heading 2] 2.4 Datasets Used in Network Intrusion Detection
+[166|Heading 2] 2.5 State of the Art: 20 Applications
+[167|Normal] The full senior project reviewed twenty cybersecurity systems and platforms. The condensed report keeps the comparison in a compact form so that the project remains within the required 40-50 pages while preserving the main research gap and how the proposed system addresses it.
+[168|Heading 2] 2.6 Literature Gap
+[169|Normal] The reviewed systems show that modern cybersecurity is moving toward AI-based detection, behavioral analytics, Threat Intelligence, real-time monitoring, SIEM/SOAR/XDR/NDR integration, and SOC-style dashboards. However, many existing solutions still suffer from high cost, proprietary models, limited Explainable AI, limited model comparison, vendor dependency, and reduced academic accessibility. The proposed project addresses these gaps by combining Hybrid AI, XAI, LSTM-based prediction, Threat Intelligence, geo-location, automated response, and a real-time dashboard in one academic platform.
+[170|Heading 2] 2.7 Detailed State-of-the-Art Gap Analysis
+[171|Normal] The table above gives the compact comparison required in the final report. The following notes preserve the main analytical content from the full project by explaining why each application was studied and how the proposed system benefits from the analysis.
+[172|Heading 3] Darktrace
+[173|Normal] Darktrace was reviewed because it represents an important direction in modern cybersecurity: AI-based NDR. Its main strength is strong behavior learning. However, the identified gap is that it is affected by proprietary ai, high cost, limited explainability. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: open-source hybrid ai with xai and model comparison.
+[174|Normal] From a Bachelor project perspective, the value of comparing Darktrace is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[175|Heading 3] Vectra AI
+[176|Normal] Vectra AI was reviewed because it represents an important direction in modern cybersecurity: Behavior-based NDR. Its main strength is strong threat prioritization. However, the identified gap is that it is affected by proprietary models, limited academic access. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds transparent models, lstm prediction, and reports.
+[177|Normal] From a Bachelor project perspective, the value of comparing Vectra AI is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[178|Heading 3] ExtraHop RevealX
+[179|Normal] ExtraHop RevealX was reviewed because it represents an important direction in modern cybersecurity: Network detection and visibility. Its main strength is deep traffic visibility. However, the identified gap is that it is affected by high cost, limited ai transparency. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds open ai pipeline and xai reasoning.
+[180|Normal] From a Bachelor project perspective, the value of comparing ExtraHop RevealX is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[181|Heading 3] Corelight Open NDR
+[182|Normal] Corelight Open NDR was reviewed because it represents an important direction in modern cybersecurity: Network metadata/forensics. Its main strength is open telemetry using zeek/suricata. However, the identified gap is that it is affected by limited native ai and prediction. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds integrated ai engine and automated response.
+[183|Normal] From a Bachelor project perspective, the value of comparing Corelight Open NDR is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[184|Heading 3] Cisco Secure Network Analytics
+[185|Normal] Cisco Secure Network Analytics was reviewed because it represents an important direction in modern cybersecurity: Flow-based NDR. Its main strength is scalable netflow/ipfix monitoring. However, the identified gap is that it is affected by cisco dependency, limited model comparison. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds local open-source model comparison.
+[186|Normal] From a Bachelor project perspective, the value of comparing Cisco Secure Network Analytics is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[187|Heading 3] Palo Alto Cortex XSIAM
+[188|Normal] Palo Alto Cortex XSIAM was reviewed because it represents an important direction in modern cybersecurity: AI SOC automation. Its main strength is siem, soar, xdr integration. However, the identified gap is that it is affected by expensive and proprietary. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: creates academic mini ai-soc workflow.
+[189|Normal] From a Bachelor project perspective, the value of comparing Palo Alto Cortex XSIAM is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[190|Heading 3] Microsoft Sentinel
+[191|Normal] Microsoft Sentinel was reviewed because it represents an important direction in modern cybersecurity: Cloud SIEM/SOAR. Its main strength is cloud scalability and automation. However, the identified gap is that it is affected by azure dependency and ingestion cost. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: works locally with open-source stack.
+[192|Normal] From a Bachelor project perspective, the value of comparing Microsoft Sentinel is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[193|Heading 3] Splunk Enterprise Security
+[194|Normal] Splunk Enterprise Security was reviewed because it represents an important direction in modern cybersecurity: SIEM/log analytics. Its main strength is powerful search and correlation. However, the identified gap is that it is affected by high cost and log-centered. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds packet/flow ai analysis.
+[195|Normal] From a Bachelor project perspective, the value of comparing Splunk Enterprise Security is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[196|Heading 3] IBM QRadar
+[197|Normal] IBM QRadar was reviewed because it represents an important direction in modern cybersecurity: SIEM and risk scoring. Its main strength is strong correlation and enterprise features. However, the identified gap is that it is affected by limited predictive ai visibility. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds lstm-based attack prediction.
+[198|Normal] From a Bachelor project perspective, the value of comparing IBM QRadar is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[199|Heading 3] Elastic Security
+[200|Normal] Elastic Security was reviewed because it represents an important direction in modern cybersecurity: Open SIEM/XDR. Its main strength is flexible and scalable. However, the identified gap is that it is affected by needs configuration; limited native dl. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds complete ai detection pipeline.
+[201|Normal] From a Bachelor project perspective, the value of comparing Elastic Security is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[202|Heading 3] CrowdStrike Falcon
+[203|Normal] CrowdStrike Falcon was reviewed because it represents an important direction in modern cybersecurity: Endpoint/XDR. Its main strength is strong endpoint protection. However, the identified gap is that it is affected by endpoint-focused. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: focuses on network traffic analysis.
+[204|Normal] From a Bachelor project perspective, the value of comparing CrowdStrike Falcon is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[205|Heading 3] Trend Micro Vision One
+[206|Normal] Trend Micro Vision One was reviewed because it represents an important direction in modern cybersecurity: XDR. Its main strength is strong email/cloud/endpoint coverage. However, the identified gap is that it is affected by proprietary ai. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds explainable open models.
+[207|Normal] From a Bachelor project perspective, the value of comparing Trend Micro Vision One is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[208|Heading 3] Google Security Operations
+[209|Normal] Google Security Operations was reviewed because it represents an important direction in modern cybersecurity: Cloud SIEM. Its main strength is massive cloud-scale analytics. However, the identified gap is that it is affected by google cloud dependency. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: local academic open architecture.
+[210|Normal] From a Bachelor project perspective, the value of comparing Google Security Operations is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[211|Heading 3] Rapid7 InsightIDR
+[212|Normal] Rapid7 InsightIDR was reviewed because it represents an important direction in modern cybersecurity: SIEM/XDR/UBA. Its main strength is strong user behavior analytics. However, the identified gap is that it is affected by limited lstm prediction. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds sequential attack prediction.
+[213|Normal] From a Bachelor project perspective, the value of comparing Rapid7 InsightIDR is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[214|Heading 3] Security Onion 2
+[215|Normal] Security Onion 2 was reviewed because it represents an important direction in modern cybersecurity: Open-source NSM. Its main strength is strong monitoring and forensics. However, the identified gap is that it is affected by no native ai engine. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds hybrid ai and xai.
+[216|Normal] From a Bachelor project perspective, the value of comparing Security Onion 2 is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[217|Heading 3] Zeek
+[218|Normal] Zeek was reviewed because it represents an important direction in modern cybersecurity: Network metadata. Its main strength is excellent protocol logs. However, the identified gap is that it is affected by no ai by default. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: uses zeek-like metadata with ai detection.
+[219|Normal] From a Bachelor project perspective, the value of comparing Zeek is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[220|Heading 3] Suricata
+[221|Normal] Suricata was reviewed because it represents an important direction in modern cybersecurity: IDS/IPS. Its main strength is strong signature detection. However, the identified gap is that it is affected by weak unknown attack detection. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds anomaly detection.
+[222|Normal] From a Bachelor project perspective, the value of comparing Suricata is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[223|Heading 3] Wazuh
+[224|Normal] Wazuh was reviewed because it represents an important direction in modern cybersecurity: HIDS/EDR/SIEM. Its main strength is strong endpoint monitoring. However, the identified gap is that it is affected by limited native ai. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds ai layer and prediction.
+[225|Normal] From a Bachelor project perspective, the value of comparing Wazuh is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[226|Heading 3] Snort 3
+[227|Normal] Snort 3 was reviewed because it represents an important direction in modern cybersecurity: IDS/IPS. Its main strength is mature signature-based ids. However, the identified gap is that it is affected by cannot detect unknown attacks well. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds ml/dl anomaly detection.
+[228|Normal] From a Bachelor project perspective, the value of comparing Snort 3 is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[229|Heading 3] Cisco XDR
+[230|Normal] Cisco XDR was reviewed because it represents an important direction in modern cybersecurity: Enterprise XDR. Its main strength is unified cisco security. However, the identified gap is that it is affected by vendor dependency. The proposed AI-Powered Network Traffic Analyzer & Anomaly Detector does not attempt to replace this commercial or open-source system. Instead, it extracts the academic lesson from it and addresses the gap through the following improvement: adds customizable open-source design.
+[231|Normal] From a Bachelor project perspective, the value of comparing Cisco XDR is that it helps justify why the proposed project must include more than a simple classifier. The project should include visibility, detection, explanation, model comparison, alerts, and response workflow. This makes the final prototype closer to a small educational NDR platform rather than only a dataset experiment.
+[233|Heading 1] Chapter 3 - Proposed System Architecture
+[234|Heading 2] 3.1 Architecture Overview
+[235|Normal] The proposed platform is designed as a modular AI-powered cybersecurity system. Each module performs a clear task and communicates with other modules through the backend. This design makes the system easier to understand, test, and expand.
+[237|Normal] Figure 1. Proposed System Architecture.
+[238|Heading 2] 3.2 AI Detection Pipeline
+[239|Normal] The detection pipeline starts with raw network traffic. The system extracts flow features, cleans and scales the data, sends the feature vector to the AI engine, combines model decisions, and finally generates a risk score, alert, and response action.
+[241|Normal] Figure 2. AI Detection Pipeline.
+[242|Heading 2] 3.3 Main Modules
+[243|Heading 2] 3.4 Data Flow Diagram
+[245|Normal] Figure 3. Data Flow Diagram (DFD Level 1).
+[246|Heading 2] 3.5 UML Diagrams
+[247|Normal] The UML diagrams describe how the administrator interacts with the system and how system components communicate during real-time detection.
+[249|Normal] Figure 4. Use Case Diagram.
+[251|Normal] Figure 5. Sequence Diagram - Real-Time Detection.
+[253|Normal] Figure 6. Activity Diagram - Detection Workflow.
+[254|Heading 2] 3.6 Threat Model
+[255|Normal] The STRIDE model is used to identify major security risks affecting the proposed platform. The system must protect against spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege.
+[257|Normal] Figure 7. Simplified STRIDE Threat Model.
+[259|Heading 1] Chapter 4 - Implementation Methodology
+[260|Heading 2] 4.1 Technology Stack
+[261|Heading 2] 4.2 Feature Engineering
+[262|Heading 2] 4.3 Model Development
+[263|Normal] Model development begins with data loading, cleaning, feature selection, and splitting into training and testing sets. Random Forest and XGBoost are trained for labeled attack classification. Isolation Forest and Autoencoder are trained to detect unusual behavior. LSTM is prepared using traffic sequences so it can learn temporal patterns rather than isolated rows.
+[264|Heading 2] 4.4 Decision Fusion
+[265|Normal] The proposed system does not depend on one model only. Instead, it combines model outputs into a final risk score. For example, if XGBoost classifies a flow as attack, Isolation Forest marks it as outlier, and Threat Intelligence reports the IP as suspicious, the system increases the severity level. This fusion approach is expected to reduce false negatives and improve analyst confidence.
+[266|Heading 2] 4.5 Database Design
+[267|Heading 2] 4.6 Dashboard Design
+[269|Normal] Figure 8. Real-Time Dashboard Mockup.
+[270|Normal] The dashboard should display total flows, active alerts, average threat score, detection time, recent alerts, protocol distribution, top attacking IPs, geo-location information, model comparison results, and downloadable reports. This makes the system useful for both technical evaluation and project defense.
+[271|Heading 2] 4.7 Implementation Workflow
+[273|Heading 2] 4.8 Backend API Design
+[274|Normal] The backend API connects the dashboard, the AI engine, the database, and the response engine. FastAPI is selected because it is lightweight, suitable for Python AI projects, and easy to document. The API receives traffic features, calls the model service, stores predictions, and returns results to the dashboard.
+[275|Heading 2] 4.9 Algorithmic Workflow
+[276|Heading 2] 4.10 Model Training Pseudocode
+[277|Normal] The following pseudocode summarizes the training process in an implementation-friendly style. It is written as a conceptual algorithm, not as a final programming code listing.
+[278|Normal] - Load dataset
+[279|Normal] - Separate features X and labels y
+[280|Normal] - Remove identifier columns that are not useful for learning
+[281|Normal] - Handle missing and infinite values
+[282|Normal] - Encode categorical variables
+[283|Normal] - Scale numerical features
+[284|Normal] - Split data into training and testing sets
+[285|Normal] - Train Random Forest and XGBoost on labeled data
+[286|Normal] - Train Isolation Forest and Autoencoder using normal traffic or unlabeled data
+[287|Normal] - Prepare sequential windows and train LSTM if time-based order is available
+[288|Normal] - Evaluate each model using accuracy, precision, recall, F1-score and ROC-AUC
+[289|Normal] - Save trained models and preprocessing objects for real-time inference
+[290|Heading 2] 4.11 Project Folder Structure
+[293|Heading 1] Chapter 5 - Testing and Evaluation
+[294|Heading 2] 5.1 Testing Objectives
+[295|Normal] Testing verifies that the proposed system can capture traffic, extract features, classify attacks, detect anomalies, trigger alerts, store results, update the dashboard, and generate reports. The testing stage also measures the expected performance of different models.
+[296|Heading 2] 5.2 Testing Environment
+[297|Heading 2] 5.3 Attack Simulation Scenarios
+[298|Heading 2] 5.4 Evaluation Metrics
+[299|Heading 2] 5.5 Confusion Matrix and ROC Curve
+[301|Normal] Figure 9. Confusion Matrix Example.
+[303|Normal] Figure 10. ROC Curve Example.
+[304|Heading 2] 5.6 Expected Performance Comparison
+[306|Normal] Figure 11. Expected Model Performance Comparison.
+[307|Normal] Important note: the values above are expected performance targets based on the system design and should be replaced with actual experimental results after running the final implementation. This note is included for academic honesty and to avoid presenting placeholders as confirmed results.
+[308|Heading 2] 5.7 Success Criteria
+[309|List Bullet] The system detects known attacks with high accuracy.
+[310|List Bullet] The system detects unknown anomalies using unsupervised models.
+[311|List Bullet] The dashboard updates without noticeable delay.
+[312|List Bullet] The response engine sends alerts and records incidents.
+[313|List Bullet] The system provides understandable explanations for predictions.
+[314|List Bullet] The final report includes realistic metrics and avoids unsupported claims.
+[316|Heading 2] 5.8 Detailed Test Cases
+[317|Normal] The following test cases help prove that the proposed system works as a complete platform. They can be used during the final demonstration and during the defense.
+[318|Heading 2] 5.9 Data Validation Checklist
+[319|List Bullet] Remove duplicate rows that may bias model training.
+[320|List Bullet] Check class distribution before training.
+[321|List Bullet] Do not use label columns as input features.
+[322|List Bullet] Use the same preprocessing steps during training and prediction.
+[323|List Bullet] Separate training and testing data to avoid data leakage.
+[324|List Bullet] Evaluate more than accuracy because intrusion datasets may be imbalanced.
+[325|List Bullet] Report whether metrics are real experimental results or expected placeholder values.
+[326|List Bullet] Keep screenshots of the dashboard and confusion matrix for the final defense.
+[327|Heading 2] 5.10 Error Handling and Reliability
+[328|Normal] The system should handle missing fields, invalid CSV files, unavailable Threat Intelligence APIs, database connection failures, and incorrect user input. In each case, the system should return a clear error message instead of crashing. Reliability is important because cybersecurity dashboards are expected to operate continuously during monitoring sessions.
+[329|Heading 2] 5.11 Academic Honesty in Results
+[330|Normal] If final implementation results are not yet available, performance numbers must be clearly labeled as expected targets or example values. Before submission, the student should run the implementation, capture actual metrics, and replace all placeholder values with real outputs. This protects the report from unrealistic claims and improves academic credibility.
+[332|Heading 1] Chapter 6 - Deployment, Limitations and Future Work
+[333|Heading 2] 6.1 Deployment Architecture
+[334|Normal] The proposed system can be deployed on a local laboratory machine or on a small server. The network capture service collects traffic, the backend processes requests, the AI engine performs predictions, the database stores events, and the dashboard provides visual monitoring. For a Bachelor project, local deployment is sufficient to demonstrate the full workflow.
+[335|Heading 2] 6.2 Security Considerations
+[336|Heading 2] 6.3 Limitations
+[337|List Bullet] Benchmark datasets may not fully represent every real network environment.
+[338|List Bullet] Deep Learning models require more computing resources and careful tuning.
+[339|List Bullet] LSTM prediction is useful only when data is prepared as time sequences.
+[340|List Bullet] Automatic IP blocking must be used carefully to avoid blocking legitimate users.
+[341|List Bullet] The current version is an academic prototype and requires more testing before production deployment.
+[342|Heading 2] 6.4 Future Work
+[343|List Bullet] Add real-time packet capture from multiple network interfaces.
+[344|List Bullet] Integrate Zeek or Suricata logs for richer metadata.
+[345|List Bullet] Use SHAP values for stronger Explainable AI.
+[346|List Bullet] Add multi-class attack classification with more detailed attack categories.
+[347|List Bullet] Improve dashboard interactivity and add mobile monitoring.
+[348|List Bullet] Deploy the system using Docker containers.
+[349|List Bullet] Integrate SIEM/SOAR connectors for enterprise environments.
+[350|List Bullet] Add continuous learning and model drift monitoring.
+[351|Heading 2] 6.5 Ethical and Legal Considerations
+[352|Normal] Network monitoring must respect privacy, organizational policies, and legal boundaries. The system should be tested only on authorized networks or public datasets. Captured data should be minimized, protected, and used only for security purposes. Attack simulation must be performed in a controlled lab environment.
+[354|Heading 1] Chapter 7 - Practical Implementation Notes
+[355|Heading 2] 7.1 Dataset Preparation Notes
+[356|Normal] Dataset preparation is one of the most important stages in this project. Intrusion detection datasets may contain missing values, infinite values, duplicated records, imbalanced classes, and features that do not exist in real live traffic. Therefore, the preprocessing pipeline must be written carefully and reused during real-time prediction. A common mistake is to train the model with one set of features and then send a different set of features during live detection. To avoid this issue, the final feature list should be saved and used consistently.
+[357|Heading 2] 7.2 Handling Class Imbalance
+[358|Normal] Network intrusion datasets are often imbalanced. Normal traffic may dominate the dataset, or one attack type may appear more frequently than the others. If the model is evaluated only using accuracy, it may appear successful while ignoring rare attacks. Therefore, this project uses precision, recall, F1-score, confusion matrix, and ROC-AUC. For stronger implementation, class weights, stratified splitting, undersampling, or oversampling can be tested.
+[359|Heading 2] 7.3 Threshold Tuning
+[360|Normal] The anomaly detection threshold directly affects false positives and false negatives. A low threshold may generate too many alerts, while a high threshold may miss attacks. The project should test several thresholds and select the one that gives an acceptable balance between detection and alert fatigue. In real cybersecurity environments, thresholds may also differ based on asset importance and business risk.
+[361|Heading 2] 7.4 Explainability Strategy
+[362|Normal] Explainable AI is included because security administrators need to understand why an alert was created. For tree-based models, feature importance can explain which features had the strongest influence during training. For individual predictions, SHAP-style explanation can show which values increased the risk score. In the Bachelor prototype, feature importance and a simple reason message are enough to demonstrate the concept.
+[363|Heading 2] 7.5 Report Generation
+[364|Normal] The report generation module should summarize alert ID, timestamp, source IP, destination IP, protocol, predicted class, confidence, threat score, Threat Intelligence result, recommended action, and response status. The report can be exported as PDF or CSV. This feature is important because it proves that the system can support documentation and incident review, not only display alerts.
+[365|Heading 2] 7.6 Final Demonstration Scenario
+[366|Normal] - Start backend server and database.
+[367|Normal] - Open dashboard and verify initial statistics.
+[368|Normal] - Upload a small dataset or start live capture.
+[369|Normal] - Run AI detection and display predictions.
+[370|Normal] - Select one high-risk alert and view explanation.
+[371|Normal] - Check Threat Intelligence and geo-location fields.
+[372|Normal] - Trigger email or Telegram notification.
+[373|Normal] - Block or simulate blocking the malicious IP.
+[374|Normal] - Export the incident report.
+[375|Normal] - Explain the model comparison results.
+[377|Heading 1] Chapter 8 - User Manual and Operation Guide
+[378|Heading 2] 8.1 Starting the System
+[379|Normal] The administrator starts the database service, then starts the FastAPI backend, then opens the dashboard in the browser. In a simple local setup, the backend can run on localhost and the dashboard can connect to it using REST endpoints. Before starting detection, the administrator should check that the model files, scaler file, and database connection are available.
+[380|Heading 2] 8.2 Uploading Data or Capturing Live Traffic
+[381|Normal] The system supports two operating modes. In dataset mode, the administrator uploads a CSV file extracted from a dataset such as CICIDS2017. In live mode, the capture module collects packets from a selected network interface and converts them into flow features. Dataset mode is easier for training and evaluation, while live mode is better for demonstration.
+[382|Heading 2] 8.3 Reading the Dashboard
+[383|Normal] The dashboard should be interpreted carefully. A high threat score does not always mean a confirmed attack; it means the traffic is suspicious and needs attention. The administrator should check the predicted class, confidence score, source IP, destination IP, protocol, model explanation, and Threat Intelligence result before taking final action.
+[384|Heading 2] 8.4 Responding to Alerts
+[385|Normal] When an alert appears, the administrator can review details, mark the alert as investigated, export a report, or block the source IP. In the academic prototype, IP blocking may be simulated by storing the IP in the blocked_ips table. In a real deployment, this action can be connected to firewall rules only after careful testing and approval.
+[386|Heading 2] 8.5 Maintenance Procedures
+[387|Heading 2] 8.6 Minimal Functional Requirements
+[388|Heading 2] 8.7 Non-Functional Requirements
+[389|Heading 1] Conclusion
+[390|Normal] This Senior Project proposed an AI-Powered Network Traffic Analyzer & Anomaly Detector designed for Bachelor-level implementation in Computer Science. The project addresses the limitations of traditional signature-based IDS by integrating Machine Learning, Deep Learning, anomaly detection, Threat Intelligence, Explainable AI, automated alerts, and dashboard monitoring.
+[391|Normal] The literature review and the comparison of twenty cybersecurity applications show that many commercial systems are powerful but expensive, proprietary, and difficult to use for academic experimentation. The proposed system solves these gaps by using an open-source modular architecture that allows students and researchers to understand, modify, and evaluate every component.
+[392|Normal] The expected contribution of the project is not only a single ML classifier, but a complete academic NDR-style prototype. It demonstrates the full process from traffic capture to feature extraction, AI detection, risk scoring, explanation, storage, visualization, and response. With real experimental metrics added after implementation, this project can provide a strong and realistic graduation project suitable for AUCE Computer Science requirements.
+[412|Heading 1] Appendix A - Defense Preparation Notes
+[413|Heading 1] Appendix B - Presentation Outline
+[415|Heading 1] Appendix C - Additional Defense Questions
+[416|Heading 1] Appendix D - Implementation Timeline
+[418|Heading 1] Appendix E - Practical Code Skeleton
+[419|Heading 1] Appendix F - Final Submission Checklist
+[420|Heading 1] Appendix G - Glossary of Important Terms
+[422|Heading 1] References
+[423|Normal] Ahmad, Z., Khan, A. S., Wai Shiang, C., Abdullah, J., & Ahmad, F. (2021). Network intrusion detection system: A systematic study of machine learning and deep learning approaches. Transactions on Emerging Telecommunications Technologies, 32(1), e4150. https://doi.org/10.1002/ett.4150
+[424|Normal] Breiman, L. (2001). Random forests. Machine Learning, 45, 5-32. https://doi.org/10.1023/A:1010933404324
+[425|Normal] Canadian Institute for Cybersecurity. (n.d.). Intrusion detection evaluation dataset (CICIDS2017). University of New Brunswick. https://www.unb.ca/cic/datasets/ids-2017.html
+[426|Normal] Canadian Institute for Cybersecurity. (n.d.). NSL-KDD dataset. University of New Brunswick. https://www.unb.ca/cic/datasets/nsl.html
+[427|Normal] Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (pp. 785-794). https://doi.org/10.1145/2939672.2939785
+[428|Normal] Cisco. (n.d.). Cisco Secure Network Analytics. https://www.cisco.com/site/us/en/products/security/secure-network-analytics/index.html
+[429|Normal] Cisco. (n.d.). Cisco XDR. https://www.cisco.com/site/us/en/products/security/xdr/index.html
+[430|Normal] Corelight. (n.d.). Open NDR platform. https://corelight.com/
+[431|Normal] Darktrace. (n.d.). Darktrace ActiveAI Security Platform. https://darktrace.com/
+[432|Normal] Elastic. (n.d.). Elastic Security. https://www.elastic.co/security
+[433|Normal] ExtraHop. (n.d.). RevealX network detection and response. https://www.extrahop.com/products/revealx/
+[434|Normal] Google Cloud. (n.d.). Google Security Operations. https://cloud.google.com/security/products/security-operations
+[435|Normal] IBM. (n.d.). IBM QRadar SIEM. https://www.ibm.com/products/qradar-siem
+[436|Normal] Khraisat, A., Gondal, I., Vamplew, P., & Kamruzzaman, J. (2019). Survey of intrusion detection systems: Techniques, datasets and challenges. Cybersecurity, 2, Article 20. https://doi.org/10.1186/s42400-019-0038-7
+[437|Normal] Liu, F. T., Ting, K. M., & Zhou, Z. H. (2008). Isolation forest. In 2008 Eighth IEEE International Conference on Data Mining (pp. 413-422). https://doi.org/10.1109/ICDM.2008.17
+[438|Normal] Microsoft. (n.d.). Microsoft Sentinel documentation. https://learn.microsoft.com/azure/sentinel/
+[439|Normal] Moustafa, N., & Slay, J. (2015). UNSW-NB15: A comprehensive data set for network intrusion detection systems. In 2015 Military Communications and Information Systems Conference (MilCIS) (pp. 1-6). IEEE. https://doi.org/10.1109/MilCIS.2015.7348942
+[440|Normal] National Institute of Standards and Technology. (2024). The NIST Cybersecurity Framework (CSF) 2.0 (NIST CSWP 29). https://doi.org/10.6028/NIST.CSWP.29
+[441|Normal] Palo Alto Networks. (n.d.). Cortex XSIAM. https://www.paloaltonetworks.com/cortex/cortex-xsiam
+[442|Normal] Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, E. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825-2830.
+[443|Normal] Rapid7. (n.d.). InsightIDR. https://www.rapid7.com/products/insightidr/
+[444|Normal] Scikit-learn developers. (n.d.). IsolationForest. Scikit-learn documentation. https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
+[445|Normal] Security Onion Solutions. (n.d.). Security Onion documentation. https://docs.securityonion.net/
+[446|Normal] Sharafaldin, I., Habibi Lashkari, A., & Ghorbani, A. A. (2018). Toward generating a new intrusion detection dataset and intrusion traffic characterization. In Proceedings of the 4th International Conference on Information Systems Security and Privacy (pp. 108-116). https://doi.org/10.5220/0006639801080116
+[447|Normal] Snort. (n.d.). Snort 3. https://www.snort.org/snort3
+[448|Normal] Sommer, R., & Paxson, V. (2010). Outside the closed world: On using machine learning for network intrusion detection. In 2010 IEEE Symposium on Security and Privacy (pp. 305-316). https://doi.org/10.1109/SP.2010.25
+[449|Normal] Splunk. (n.d.). Splunk Enterprise Security. https://www.splunk.com/en_us/products/enterprise-security.html
+[450|Normal] Suricata. (n.d.). Suricata user guide. https://docs.suricata.io/
+[451|Normal] Trend Micro. (n.d.). Trend Vision One. https://www.trendmicro.com/en_us/business/products/one-platform.html
+[452|Normal] Vectra AI. (n.d.). Vectra AI platform. https://www.vectra.ai/
+[453|Normal] Wazuh. (n.d.). Wazuh documentation. https://documentation.wazuh.com/
+[454|Normal] Zeek. (n.d.). Zeek documentation. https://docs.zeek.org/

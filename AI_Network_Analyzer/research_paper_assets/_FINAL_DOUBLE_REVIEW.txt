@@ -1,0 +1,15 @@
+PASS A
+LoF body=23 table=23 equal=True sequential=True
+Acronyms=35 sorted_check=True
+Refs=41 contiguous=True
+Cites=41 unused=[] missing=[]
+PASS B critical OK checks
+OK Darktrace was reviewed [9]
+OK MITRE ATT&CK [36]
+OK Streamlit [34]
+OK NSL-KDD [4]
+OK UNSW-NB15 [17]
+OK NIST [18]
+OK AbuseIPDB [39]
+OK CrowdStrike Falcon was reviewed [41]
+No lettered Figure leftovers: True

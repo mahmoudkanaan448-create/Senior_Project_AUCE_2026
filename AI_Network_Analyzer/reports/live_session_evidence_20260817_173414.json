@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-08-17T17:34:14.128646Z",
+  "flows_total": 0,
+  "unique_source_ips": 0,
+  "flow_kinds": {
+    "simulation": 0,
+    "lan": 0,
+    "public": 0,
+    "loopback": 0,
+    "special": 0,
+    "unknown": 0
+  },
+  "live_or_lan_flows": 0,
+  "simulation_flows": 0,
+  "loopback_flows": 0,
+  "capture_span_minutes": 0.0,
+  "predictions": 0,
+  "attack_predictions": 0,
+  "predictions_with_xai": 0,
+  "alerts": 0,
+  "pcap_files": [],
+  "pcap_db_rows": 0,
+  "realism_notes": [
+    "Simulation uses RFC 5737 TEST-NET addresses (203.0.113.0/24, 198.51.100.0/24).",
+    "LAN/private RFC1918 and public IPs come from live capture or real hosts.",
+    "XAI is stored per prediction when detection has been run."
+  ],
+  "evidence_level": "insufficient"
+}
